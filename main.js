@@ -1,0 +1,76 @@
+/*=============== SHOW & CLOSE MENU ===============*/
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
+
+/* Show menu */
+if(navToggle){
+   navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu')
+   })
+}
+
+/* Hide menu */
+if(navClose){
+   navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu')
+   })
+}
+
+/*=============== REMOVE MOBILE MENU ===============*/
+const navLink = document.querySelectorAll('.nav__link, .nav__contact')
+
+const linkAction = () =>{
+   const navMenu = document.getElementById('nav-menu')
+   // When we click on each nav__link, we remove the show-menu class
+   navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*=============== HOME TEXT CIRCULAR ===============*/
+const homeText = document.getElementById('home-text');
+letters = homeText.textContent.trim().split(''); // converts text into an array for characters
+analestep = 360 / letters.length; // angel for each character; length counts the numbers of characters 
+homeText.textContent = ''; // clear the text content of the element
+
+// ITERATES THROUGH EACH CHARACTER
+letters.forEach((char, i) => {
+ const span = document.createElement('span'); // creates a span element
+ span.textContent = char; // sets the text content of the span to the character
+ span.style.transform = `rotate(${analestep * i}deg)`; // rotates the span by the calculated angle
+ homeText.appendChild(span); // appends the span to the homeText element
+})
+/*=============== HOME TYPED JS ===============*/
+const typedHome = new Typed('#home-typed', {
+    strings: ['Freelancer', 'Web Developer', 'SEO Specialist'], // Insert professions
+    typeSpeed: 60,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true,
+})
+
+/*=============== CHANGE HEADER STYLES ===============*/
+
+
+/*=============== SWIPER WORK ===============*/ 
+
+
+/*=============== SERVICES ACCORDION ===============*/ 
+
+
+/*=============== TESTIMONIALS OF DUPLICATE CARDS ===============*/ 
+
+
+/*=============== CONTACT EMAIL JS ===============*/ 
+
+
+/*=============== SHOW SCROLL UP ===============*/ 
+
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+
+
+/*=============== CUSTOM CURSOR ===============*/
+
+
+/*=============== SCROLLREVEAL ANIMATION ===============*/
