@@ -1,186 +1,659 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
-<body>
-    <!--==================== HEADER & NAV ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="" class="nav__logo">Nour EL Din</a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#work" class="nav__link">Work</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">Services</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">Skills</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#testimonials" class="nav__link">Testimonials</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
-                    </li>
-                </ul>
-
-                <!--close-->
-                <button class="nav__close" id="nav-close" aria-label="close menu">
-                    <i class="ri-close-large-line"></i>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0b0d0a" />
+        <meta
+            name="description"
+            content="Nour EL Din — creative designer and front-end developer. Explore my work, services, and approach to building thoughtful websites."
+        />
+        <title>Nour EL Din — Designer &amp; Developer</title>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='18'%20fill='%230b0d0a'/%3E%3Ctext%20x='32'%20y='45'%20text-anchor='middle'%20font-family='Arial'%20font-size='43'%20fill='%23b7ed91'%3EN%3C/text%3E%3C/svg%3E"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
+        <header class="header" id="header">
+            <nav class="nav container" aria-label="Main navigation">
+                <a href="#home" class="nav__logo"
+                    >Nour EL Din<span aria-hidden="true">.</span></a
+                >
+                <button
+                    class="nav__toggle"
+                    id="nav-toggle"
+                    aria-label="Open menu"
+                    aria-controls="nav-menu"
+                    aria-expanded="false"
+                >
+                    <span></span><span></span>
                 </button>
-            </div>
-
-            <!--toggle-->
-            <button class="nav__toggle" id="nav-toggle" aria-label="open menu">
-            <i class="ri-menu-line"></i>
-            
-            </button>
-        </nav>
-    </header>
-
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        
-        
-
-        <!--==================== HOME SECTION ====================-->
-        <section class="home section" id="home">
-         <div class="blob-small"></div>
-         <div class="blob-small"></div>
-
-         <div class="home__container container grid">
-            <div class="home__data">
-                <h1 class="home__title">
-                    Creative Designer <br>
-                    <span id="home-typed"></span> 
-                </h1>
-                <h3 class="home__subtitle">Front-End Developer</h3>
-                <p class="home__description">Hi! I'm Nour EL Din, I build designs and websites that solve problems .</p>
-                    
-        <div class="dropdown-icons">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-discord"></i></a>
-        </div>
-            </div>
-                <div class="home__circle">
-                <span class="home__text" id="home-text">LET'S - EXPLORE - MORE - </span>
-
-                <a href="#about" class="home__arrow">
-                    <i class="ri-arrow-down-line"></i>
-                </a>
-               </div> 
-               <div class="blob-big"></div>
-            </div>
-         </div>
-        </section>
-
-        <!--==================== ABOUT SECTION ====================-->
-        <section class="about section">
-    <div class="about__container container grid">
-        <h2 class="about__title">
-            About Me: Young freelancer who enjoys <span>web design</span>
-            and <span>development</span>, passionate about my work, disciplined,
-            and successful.
-        </h2>
-
-        <div class="about__info">
-            <p class="about__description">
-                If you have a project in mind, check out my work and contact me
-                to work together. Best of luck!
-            </p>
-
-            <a href="#contact" class="about__button button">
-                <span>Contact me</span>
-                <i class="ri-arrow-right-line"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-        <!--==================== WORK SECTION ====================-->
-        <div class="work__container container grid">
-    <div class="work__swiper">
-        <div>
-            <article class="work__card">
-                <a href="#" target="_blank" class="work__link">
-                    <img src="assets/img/work-img-1.png" alt="Portfolio project preview">
-
-                    <div class="work__arrow">
-                        <i class="ri-arrow-right-up-line"></i>
-                    </div>
-                </a>
-
-                <div class="work__data">
-
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li>
+                            <a
+                                href="#home"
+                                class="nav__link active-link"
+                                aria-current="location"
+                                >Home</a
+                            >
+                        </li>
+                        <li><a href="#about" class="nav__link">About</a></li>
+                        <li><a href="#work" class="nav__link">Work</a></li>
+                        <li><a href="#services" class="nav__link">Services</a></li>
+                        <li><a href="#skills" class="nav__link">Skills</a></li>
+                        <li>
+                            <a href="#testimonials" class="nav__link">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav__link nav__contact"
+                                >Let's talk <span aria-hidden="true">↗</span></a
+                            >
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="blob-big"></div>
-            </article>
-        </div>
-    </div>
-</div>
-
-        <!--==================== SERVICES SECTION ====================-->
-        <section class="services section" id="services">
-           
-        </section>
-
-        <!--==================== SKILLS SECTION ====================-->
-        <section class="skills section" id="skills">
-            
-        </section>
-
-        <!--==================== TESTIMONIALS SECTION ====================-->
-        <section class="testimonials section" id="testimonials">
-            
-        </section>
-
-        <!--==================== CONTACT SECTION ====================-->
-        <section class="contact section" id="contact">
-            
-        </section>
-
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        
-    </footer>
-
-    <!--==================== SCROLL UP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        
-    </a>
-<!--=============== SCROLLREVEAL - Insert link for animations ===============-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
-      
-      <!--=============== TYPED JS - Insert link for text animations ===============-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.min.js"></script>
-      
-      <!--=============== SWIPER JS - Insert link for swiperjs ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-
-      <!--=============== EMAIL JS - Insert link to send emails ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <script src="main.js"></script>
-</body>
+            </nav>
+        </header>
+        <main class="main" id="main">
+            <section class="home section" id="home" aria-labelledby="home-title">
+                <div class="blob-small" aria-hidden="true"></div>
+                <div class="blob-big" aria-hidden="true"></div>
+                <div class="home__container container">
+                    <p class="eyebrow">
+                        <span class="status-dot"></span> DESIGN WITH PURPOSE. BUILD WITH
+                        CARE.
+                    </p>
+                    <h1 class="home__title" id="home-title">
+                        Creative Designer<br /><span id="home-typed">Web Developer</span
+                        ><span class="typing-cursor" aria-hidden="true">|</span>
+                    </h1>
+                    <h2 class="home__subtitle">Front-End Developer</h2>
+                    <p class="home__description">
+                        Hi! I'm Nour EL Din. I build designs and websites<br
+                            class="desktop-break"
+                        />
+                        that solve problems and bring ideas to life.
+                    </p>
+                    <div class="home__actions">
+                        <a href="#work" class="button"
+                            >Explore my work <span aria-hidden="true">↗</span></a
+                        ><a href="#contact" class="text-link"
+                            >Have a project? Let's talk
+                            <span aria-hidden="true">↗</span></a
+                        >
+                    </div>
+                    <a
+                        href="#about"
+                        class="home__circle"
+                        aria-label="Explore more about me"
+                    >
+                        <svg class="home__text" viewbox="0 0 120 120" aria-hidden="true">
+                            <defs>
+                                <path
+                                    id="circle-text"
+                                    d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"
+                                ></path>
+                            </defs>
+                            <text>
+                                <textpath href="#circle-text" textlength="276">
+                                    LET'S EXPLORE MORE · LET'S EXPLORE MORE ·
+                                </textpath>
+                            </text>
+                        </svg>
+                        <span class="home__arrow" aria-hidden="true">↓</span>
+                    </a>
+                    <div class="home__bottom">
+                        <span>THOUGHTFUL DESIGN</span
+                        ><span class="tiny-star" aria-hidden="true">✳</span
+                        ><span>MEANINGFUL EXPERIENCES</span
+                        ><span class="tiny-star" aria-hidden="true">✳</span
+                        ><span>CLEAN DEVELOPMENT</span>
+                    </div>
+                </div>
+            </section>
+            <section class="about section" id="about" aria-labelledby="about-title">
+                <div class="container">
+                    <p class="eyebrow section-label">01 / A LITTLE ABOUT ME</p>
+                    <div class="about__container grid reveal">
+                        <h2 class="about__title" id="about-title">
+                            A young freelancer with a love for
+                            <span>web design</span> &amp; <span>development.</span>
+                        </h2>
+                        <div class="about__info">
+                            <p>
+                                I enjoy turning ideas into clear, useful digital
+                                experiences. Creative in my approach and disciplined in my
+                                work, I care about the details that make a website feel
+                                right.
+                            </p>
+                            <p>
+                                Have a project in mind? Explore my work, then let's find
+                                the right way to bring your idea to life.
+                            </p>
+                            <a href="#contact" class="button"
+                                >Contact me <span aria-hidden="true">↗</span></a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="work section" id="work" aria-labelledby="work-title">
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow section-label">02 / SELECTED PROJECTS</p>
+                            <h2 class="section__title" id="work-title">
+                                View My <span>Work</span>
+                            </h2>
+                        </div>
+                        <p>
+                            A few ideas brought to the web.<br />Design, development, and
+                            the details between.
+                        </p>
+                    </div>
+                    <div
+                        class="work__track"
+                        id="work-track"
+                        role="region"
+                        aria-label="Project carousel"
+                        tabindex="0"
+                    >
+                        <article class="work__card reveal">
+                            <button
+                                class="work__link project-cover"
+                                data-project="0"
+                                aria-label="View iPower project details"
+                            >
+                                <img
+                                    src="assets/img/ipower.png"
+                                    alt="iPower website screenshot"
+                                    class="work__img"
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1899"
+                                    height="872"
+                                /><span class="work__arrow" aria-hidden="true">↗</span>
+                            </button>
+                            <div class="work__data">
+                                <span class="work__number">01</span>
+                                <div>
+                                    <h3 class="work__name">iPower</h3>
+                                    <p>Website for an IT company.</p>
+                                    <div class="tags">
+                                        <span>HTML</span><span>CSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="work__card reveal">
+                            <button
+                                class="work__link project-cover"
+                                data-project="1"
+                                aria-label="View Adly Chess Academy project details"
+                            >
+                                <img
+                                    src="assets/img/adly-chess.png"
+                                    alt="Adly Chess Academy website screenshot"
+                                    class="work__img"
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1899"
+                                    height="872"
+                                /><span class="work__arrow" aria-hidden="true">↗</span>
+                            </button>
+                            <div class="work__data">
+                                <span class="work__number">02</span>
+                                <div>
+                                    <h3 class="work__name">Adly Chess Academy</h3>
+                                    <p>Website for a chess academy.</p>
+                                    <div class="tags">
+                                        <span>Figma</span><span>JavaScript</span
+                                        ><span>GSAP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="work__card reveal">
+                            <button
+                                class="work__link project-cover"
+                                data-project="2"
+                                aria-label="View Twins Elmasrya project details"
+                            >
+                                <img
+                                    src="assets/img/twins-elmasrya.png"
+                                    alt="Twins Elmasrya website screenshot"
+                                    class="work__img"
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1899"
+                                    height="872"
+                                /><span class="work__arrow" aria-hidden="true">↗</span>
+                            </button>
+                            <div class="work__data">
+                                <span class="work__number">03</span>
+                                <div>
+                                    <h3 class="work__name">Twins Elmasrya</h3>
+                                    <p>Website for an office furniture company.</p>
+                                    <div class="tags">
+                                        <span>HTML</span><span>CSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="work__card reveal">
+                            <button
+                                class="work__link project-cover"
+                                data-project="3"
+                                aria-label="View Kick Zone Sportswear project details"
+                            >
+                                <img
+                                    src="assets/img/kick-zone-sportswear.png"
+                                    alt="Kick Zone Sportswear website screenshot"
+                                    class="work__img"
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1899"
+                                    height="872"
+                                /><span class="work__arrow" aria-hidden="true">↗</span>
+                            </button>
+                            <div class="work__data">
+                                <span class="work__number">04</span>
+                                <div>
+                                    <h3 class="work__name">Kick Zone Sportswear</h3>
+                                    <p>Online store for a sportswear brand.</p>
+                                    <div class="tags">
+                                        <span>HTML</span><span>CSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="work__card reveal">
+                            <button
+                                class="work__link project-cover"
+                                data-project="4"
+                                aria-label="View Verofax project details"
+                            >
+                                <img
+                                    src="assets/img/verofax.png"
+                                    alt="Verofax website screenshot"
+                                    class="work__img"
+                                    loading="lazy"
+                                    decoding="async"
+                                    width="1899"
+                                    height="872"
+                                /><span class="work__arrow" aria-hidden="true">↗</span>
+                            </button>
+                            <div class="work__data">
+                                <span class="work__number">05</span>
+                                <div>
+                                    <h3 class="work__name">Verofax</h3>
+                                    <p>Corporate website project.</p>
+                                    <div class="tags">
+                                        <span>HTML</span><span>CSS</span
+                                        ><span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="work__controls">
+                        <p>Scroll to explore <span aria-hidden="true">⟶</span></p>
+                        <div>
+                            <button
+                                class="round-button"
+                                id="work-prev"
+                                aria-label="Previous projects"
+                            >
+                                ←</button
+                            ><button
+                                class="round-button"
+                                id="work-next"
+                                aria-label="Next projects"
+                            >
+                                →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="services section"
+                id="services"
+                aria-labelledby="services-title"
+            >
+                <div class="container">
+                    <div class="section-heading">
+                        <div>
+                            <p class="eyebrow section-label">
+                                03 / WHAT I CAN DO FOR YOU
+                            </p>
+                            <h2 class="section__title" id="services-title">
+                                My <span>Services</span>
+                            </h2>
+                        </div>
+                        <p>From the first sketch<br />to the final interaction.</p>
+                    </div>
+                    <div class="services__container">
+                        <details class="services__card reveal" open>
+                            <summary>
+                                <span class="service__number">01</span
+                                ><span class="service__icon" aria-hidden="true"
+                                    >&lt;/&gt;</span
+                                >
+                                <h3>Web Development</h3>
+                                <span class="service__arrow" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="service__data">
+                                <p>
+                                    Clean, responsive websites that make your ideas work
+                                    on every screen. Built with attention to structure,
+                                    usability, and the small details.
+                                </p>
+                                <ul>
+                                    <li>Front-end development</li>
+                                    <li>Responsive layouts</li>
+                                    <li>Interactive components</li>
+                                    <li>Cross-device refinement</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="services__card reveal">
+                            <summary>
+                                <span class="service__number">02</span
+                                ><span class="service__icon" aria-hidden="true">◇</span>
+                                <h3>Web &amp; UI Design</h3>
+                                <span class="service__arrow" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="service__data">
+                                <p>
+                                    Thoughtful layouts and visual systems that express
+                                    your brand and help people find what they need.
+                                </p>
+                                <ul>
+                                    <li>Website design</li>
+                                    <li>Wireframes &amp; prototypes</li>
+                                    <li>Typography &amp; color systems</li>
+                                    <li>Figma handoff</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="services__card reveal">
+                            <summary>
+                                <span class="service__number">03</span
+                                ><span class="service__icon" aria-hidden="true">✳</span>
+                                <h3>Motion &amp; Interaction</h3>
+                                <span class="service__arrow" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="service__data">
+                                <p>
+                                    Purposeful movement that adds personality without
+                                    getting in the way. From subtle hover states to smooth
+                                    scroll reveals.
+                                </p>
+                                <ul>
+                                    <li>Scroll animations</li>
+                                    <li>Micro-interactions</li>
+                                    <li>CSS &amp; JavaScript motion</li>
+                                    <li>Reduced-motion support</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="services__card reveal">
+                            <summary>
+                                <span class="service__number">04</span
+                                ><span class="service__icon" aria-hidden="true">↗</span>
+                                <h3>Website Refinement</h3>
+                                <span class="service__arrow" aria-hidden="true">+</span>
+                            </summary>
+                            <div class="service__data">
+                                <p>
+                                    Give an existing website a considered refresh. Improve
+                                    the layout, resolve front-end issues, and make the
+                                    experience more consistent.
+                                </p>
+                                <ul>
+                                    <li>Responsive fixes</li>
+                                    <li>Visual refreshes</li>
+                                    <li>Semantic HTML &amp; SEO basics</li>
+                                    <li>Usability improvements</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+            <section class="skills section" id="skills" aria-labelledby="skills-title">
+                <div class="container skills__container grid">
+                    <div class="skills__intro reveal">
+                        <p class="eyebrow section-label">04 / MY TOOLKIT</p>
+                        <h2 class="section__title" id="skills-title">
+                            The tools behind<br />the <span>ideas.</span>
+                        </h2>
+                        <p>
+                            Design thinking meets hands-on development. The right tools
+                            for a thoughtful digital experience.
+                        </p>
+                        <a href="#work" class="text-link"
+                            >See them in action <span aria-hidden="true">↗</span></a
+                        >
+                    </div>
+                    <div class="skills__grid">
+                        <article class="skill-card reveal">
+                            <span class="skill-icon">&lt;5&gt;</span>
+                            <h3>HTML</h3>
+                            <p>Structure &amp; semantics</p>
+                        </article>
+                        <article class="skill-card reveal">
+                            <span class="skill-icon">{3}</span>
+                            <h3>CSS</h3>
+                            <p>Style &amp; responsiveness</p>
+                        </article>
+                        <article class="skill-card reveal">
+                            <span class="skill-icon">JS</span>
+                            <h3>JavaScript</h3>
+                            <p>Logic &amp; interaction</p>
+                        </article>
+                        <article class="skill-card reveal">
+                            <span class="skill-icon figma-icon">F</span>
+                            <h3>Figma</h3>
+                            <p>Design &amp; prototyping</p>
+                        </article>
+                        <article class="skill-card reveal">
+                            <span class="skill-icon">↝</span>
+                            <h3>GSAP</h3>
+                            <p>Motion &amp; animation</p>
+                        </article>
+                        <article class="skill-card reveal">
+                            <span class="skill-icon">⌕</span>
+                            <h3>SEO</h3>
+                            <p>On-page foundations</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="testimonials section"
+                id="testimonials"
+                aria-labelledby="testimonials-title"
+            >
+                <div class="container">
+                    <p class="eyebrow section-label">05 / CLIENT STORIES</p>
+                    <h2 class="section__title" id="testimonials-title">
+                        Good work starts with<br /><span>good collaboration.</span>
+                    </h2>
+                    <div class="testimonial-card reveal">
+                        <span class="quote-mark" aria-hidden="true">“</span>
+                        <div>
+                            <p class="testimonial__headline">
+                                Your experience could be<br />the next story here.
+                            </p>
+                            <p>
+                                Client testimonials will be shared here as they become
+                                available.
+                            </p>
+                            <a href="#contact" class="text-link"
+                                >Let's create something together
+                                <span aria-hidden="true">↗</span></a
+                            >
+                        </div>
+                        <span class="testimonial-star" aria-hidden="true">✳</span>
+                    </div>
+                </div>
+            </section>
+            <section class="contact section" id="contact" aria-labelledby="contact-title">
+                <div class="container contact__container grid">
+                    <div class="contact__intro reveal">
+                        <p class="eyebrow section-label">06 / LET'S MAKE IT HAPPEN</p>
+                        <h2 class="section__title" id="contact-title">
+                            Have an idea?<br />Let's build<br /><span
+                                >something great.</span
+                            >
+                        </h2>
+                        <p>
+                            Tell me a little about your project, what you need, and where
+                            you'd like to take it.
+                        </p>
+                        <div class="contact__note">
+                            <span aria-hidden="true">↗</span>
+                            <p>A great project starts<br />with a simple conversation.</p>
+                        </div>
+                        <a
+                            class="contact__email text-link"
+                            href="mailto:nooreldin20162007@gmail.com"
+                            >nooreldin20162007@gmail.com</a
+                        >
+                    </div>
+                    <form class="contact__form reveal" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Your name <span>*</span></label
+                                ><input
+                                    id="name"
+                                    name="name"
+                                    type="text"
+                                    placeholder="What's your name?"
+                                    autocomplete="name"
+                                    maxlength="100"
+                                    required
+                                />
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Your email <span>*</span></label
+                                ><input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    maxlength="254"
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="service">What do you need?</label
+                            ><select name="service" id="service">
+                                <option value="Let's discuss">Select a service</option>
+                                Web Development
+                                <option>Web &amp; UI Design</option>
+                                <option>Motion &amp; Interaction</option>
+                                <option>Website Refinement</option>
+                                <option>Something else</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="message"
+                                >A little about your project <span>*</span></label
+                            ><textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Your idea, goals, timeline — I'd love to know more."
+                                minlength="10"
+                                maxlength="5000"
+                                required
+                            ></textarea>
+                        </div>
+                        <p class="form-note" id="form-note">
+                            This opens a draft in your email app. Review and send it
+                            there.
+                        </p>
+                        <button type="submit" class="button" id="contact-submit">
+                            Open email draft <span aria-hidden="true">↗</span>
+                        </button>
+                        <p
+                            class="form-status"
+                            id="form-status"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <a href="#home" class="nav__logo">Nour EL Din<span>.</span></a>
+                    <p>Thoughtful design. Purposeful development.</p>
+                    <a href="#home" class="text-link"
+                        >Back to top <span aria-hidden="true">↑</span></a
+                    >
+                </div>
+                <div class="footer__bottom">
+                    <p>© <span id="year">2026</span> Nour EL Din. All rights reserved.</p>
+                    <nav aria-label="Footer navigation">
+                        <a href="#work">Work</a><a href="#services">Services</a
+                        ><a href="#contact">Contact</a>
+                    </nav>
+                    <span
+                        >Designed with care
+                        <span class="tiny-star" aria-hidden="true">✳</span></span
+                    >
+                </div>
+            </div>
+        </footer>
+        <a
+            href="#home"
+            class="scrollup round-button"
+            id="scroll-up"
+            aria-label="Back to top"
+            tabindex="-1"
+            >↑</a
+        >
+        <dialog
+            id="project-dialog"
+            class="project-dialog"
+            aria-labelledby="project-title"
+        >
+            <button class="dialog-close round-button" aria-label="Close project details">
+                ×
+            </button>
+            <p class="eyebrow">PROJECT OVERVIEW</p>
+            <h2 id="project-title"></h2>
+            <img
+                id="project-image"
+                class="project-dialog__image"
+                alt=""
+                src="assets/img/ipower.png"
+                width="1899"
+                height="872"
+            />
+            <p id="project-description"></p>
+            <div id="project-tags" class="tags"></div>
+            <p class="dialog-note">
+                Website screenshot. Live project links will be added when available.
+            </p>
+            <a class="button" href="#contact" id="project-contact"
+                >Discuss a similar project <span aria-hidden="true">↗</span></a
+            >
+        </dialog>
+    </body>
 </html>
