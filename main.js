@@ -209,11 +209,13 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
 
 /*=============== PROJECT DATA ===============*/
 
-// عدّل اسم المشروع ووصفه والتقنيات ومسار صورته من القائمة التالية.
+// عدّل اسم المشروع ووصفه والتقنيات ومسار صورته والرابط المباشر هنا.
+// liveUrl: اتركها فارغة للمشاريع التي لم تضف رابطها بعد.
 const projects = [
     {
         title: 'iPower',
         image: 'assets/img/ipower.png',
+        liveUrl: '',
         description:
             'A professional website for an IT company, using HTML, CSS, JavaScript, and database integration.',
         tags: ['HTML', 'CSS', 'JavaScript', 'Database'],
@@ -221,6 +223,7 @@ const projects = [
     {
         title: 'Adly Chess Academy',
         image: 'assets/img/adly-chess.png',
+        liveUrl: 'https://nour-eldin11.github.io/adly-chess-academy/',
         description:
             'A website for a chess academy, combining interface design, front-end development, motion, and database integration.',
         tags: ['HTML', 'CSS', 'JavaScript', 'GSAP', 'Figma', 'Database'],
@@ -228,6 +231,7 @@ const projects = [
     {
         title: 'Twins Elmasrya',
         image: 'assets/img/twins-elmasrya.png',
+        liveUrl: 'https://twins-almasrya.com/en/',
         description:
             'A professional website for an office furniture company, using HTML, CSS, JavaScript, and database integration.',
         tags: ['HTML', 'CSS', 'JavaScript', 'Database'],
@@ -235,6 +239,7 @@ const projects = [
     {
         title: 'Kick Zone Sportswear',
         image: 'assets/img/kick-zone-sportswear.png',
+        liveUrl: '',
         description:
             'A sportswear online store project, using HTML, CSS, JavaScript, and database integration.',
         tags: ['HTML', 'CSS', 'JavaScript', 'Database'],
@@ -242,9 +247,26 @@ const projects = [
     {
         title: 'Verofax',
         image: 'assets/img/verofax.png',
+        liveUrl: 'https://nour-eldin11.github.io/Verofax_Project/',
         description:
             'A corporate website project, using HTML, CSS, JavaScript, and database integration.',
         tags: ['HTML', 'CSS', 'JavaScript', 'Database'],
+    },
+    {
+        title: 'PrimeCare Clinic',
+        image: 'assets/img/primecare-clinic.svg',
+        imageAlt: 'PrimeCare Clinic project cover',
+        liveUrl: 'https://nour-eldin11.github.io/primecare-clinic-react-with-index/',
+        description: 'A modern healthcare website built with React.',
+        tags: ['React', 'JavaScript', 'CSS'],
+    },
+    {
+        title: 'Offgrid Supply',
+        image: 'assets/img/offgrid-supply.svg',
+        imageAlt: 'Offgrid Supply project cover',
+        liveUrl: 'https://nour-eldin11.github.io/Offgrid-Supply-Website-TypeScript/',
+        description: 'A streetwear storefront built with TypeScript.',
+        tags: ['TypeScript', 'HTML', 'CSS'],
     },
 ];
 
@@ -257,8 +279,30 @@ document.querySelectorAll('[data-project]').forEach((button) =>
         document.querySelector('#project-title').textContent = project.title;
         const projectImage = document.querySelector('#project-image');
         projectImage.src = project.image;
-        projectImage.alt = project.title + ' website screenshot';
+        projectImage.alt = project.imageAlt || project.title + ' website screenshot';
         document.querySelector('#project-description').textContent = project.description;
+
+        // إظهار زر الموقع فقط عندما يكون للمشروع رابط حقيقي.
+        const liveLink = document.querySelector('#project-live-link');
+        const projectNote = document.querySelector('#project-note');
+        const hasLiveUrl = Boolean(project.liveUrl);
+
+        liveLink.hidden = !hasLiveUrl;
+
+        if (hasLiveUrl) {
+            liveLink.href = project.liveUrl;
+            liveLink.setAttribute(
+                'aria-label',
+                `Visit ${project.title} live site (opens in a new tab)`,
+            );
+            projectNote.textContent = 'Explore the live website in a new tab.';
+        } else {
+            liveLink.removeAttribute('href');
+            liveLink.removeAttribute('aria-label');
+            projectNote.textContent =
+                'Website screenshot. The live project link will be added when available.';
+        }
+
         const tags = document.querySelector('#project-tags');
         tags.replaceChildren();
         project.tags.forEach((tag) => {
